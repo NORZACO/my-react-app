@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <title>React ⚛️</title>
+</head>
+
+<body>
+  <h1>Getting Started with React</h1>
+  <!-- Render the component -->
+  <div id="root">Loading... </div>
+  <div id="root2">Loading... </div>
+
+  <script type="text/javascript">
+    // async fetch http://159.223.161.123:3000/items
+
+    let heading = React.createElement("h1", null, "GEting started with react course");
+    var root = document.getElementById('root')
+    ReactDOM.render(heading, root);
+
+    /* CREATE UL */
+    const listItems = [
+      "Item 1",
+      "Item2",
+      "item three ",
+    ];
+
+    let ul = React.createElement('ul',
+      { style: { color: "blue" } },
+      listItems.map((list) =>
+        React.createElement('li', {}, `${list}`)
+      )
+    );
+
+    var root2 = document.getElementById('root2')
+    ReactDOM.render(ul, root2);
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>
